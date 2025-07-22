@@ -6,8 +6,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types",
-    "postinstall": "npx --yes @vercel/build-utils@latest build --force"
+    "check-types": "turbo run check-types"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.0",
