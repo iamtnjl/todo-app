@@ -1,8 +1,8 @@
 {
-  "projects": [
+  "rewrites": [
     {
-      "src": "apps/web",
-      "use": "@vercel/next"
+      "source": "/(.*)",
+      "destination": "/apps/web/$1"
     }
   ]
 }
