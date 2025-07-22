@@ -1,31 +1,25 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Fustat } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { ConvexClientProvider } from "../convex/client";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const fustat = Fustat({
+  subsets: ["latin"],
+  variable: "--font-fustat",
+  display: "swap",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Todo Apps",
   description: "Track your day to day tasks.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={fustat.variable}>
+      <body>
         <Navbar />
         <ConvexClientProvider>
           <div className="max-w-[1440px] mx-auto px-4">{children}</div>
