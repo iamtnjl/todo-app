@@ -28,6 +28,7 @@
     "apps/*",
     "packages/*"
   ],
+  "postinstall": "npx --yes @vercel/build-utils@latest build --force",
   "dependencies": {
     "convex": "^1.25.4",
     "react": "^19.1.0",
