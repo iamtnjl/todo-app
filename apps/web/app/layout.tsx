@@ -1,13 +1,6 @@
-import { Fustat } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { ConvexClientProvider } from "../convex/client";
-
-const fustat = Fustat({
-  subsets: ["latin"],
-  variable: "--font-fustat",
-  display: "swap",
-});
 
 export const metadata = {
   title: "Todo Apps",
@@ -18,7 +11,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={fustat.variable}>
+    <html lang="en">
       <body>
         <Navbar />
         <ConvexClientProvider>
